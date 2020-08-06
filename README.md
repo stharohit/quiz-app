@@ -1,2 +1,3 @@
 ## Quiz App
-[https://stharohit.github.io/quiz-app/]
+
+Check out my app [here.](https://stharohit.github.io/quiz-app/)

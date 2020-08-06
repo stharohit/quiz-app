@@ -10,9 +10,13 @@ const Router = () => {
     <BrowserRouter>
       <Switch>
         <Route exact path="/">
-          <Redirect to="/auth/login" />
+          {
+            window.localStorage.getItem("loggedIn") === "false" ? 
+            <Redirect to="/auth/login" /> : 
+            <Redirect to="/user/quiz" />
+          }
         </Route>
-        <Route path="/auth/login">
+        <Route path="/auth/">
           <AuthRoute />
         </Route>
         <PrivateRoutes path="/user/quiz" component={Routes} />

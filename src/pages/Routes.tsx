@@ -7,6 +7,8 @@ import QuizStart from "../pages/Quiz/QuizStart";
 import { stylesheet } from "typestyle";
 import { Colors } from "../constants/Colors";
 import { Switch, Route } from "react-router";
+import SideBar from "../components/SideBar/SideBar";
+import Menu from "../components/Menu/Menu";
 
 const classNames = stylesheet({
   title: {
@@ -18,12 +20,11 @@ const classNames = stylesheet({
 });
 
 const Routes = () => {
-
   return (
     <Layout>
-      {/* <SideBar>
-        <Menu MenuItems={MenuItems} />
-      </SideBar> */}
+      <SideBar>
+        <Menu />
+      </SideBar>
       <Content>
         <h1 className={classNames.title}>Quiz App</h1>
         <Switch>

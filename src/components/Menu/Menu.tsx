@@ -1,5 +1,4 @@
 import React from "react";
-import { MenuItemProps } from "./interface";
 import { stylesheet } from "typestyle";
 import { Link } from "react-router-dom";
 import { Colors } from "../../constants/Colors";
@@ -32,25 +31,21 @@ const classNames = stylesheet({
   }
 });
 
-interface Props {
-  MenuItems: Array<MenuItemProps>;
-}
+interface Props {}
 
 const Menu = (props: Props) => {
-  const { MenuItems } = props;
+  const handleLogout = () => {
+    window.localStorage.setItem("loggedIn", "false");
+    window.location.reload();
+  }
   return (
     <div>
       <ul>
-        {MenuItems &&
-          MenuItems.map((item, index) => {
-            return (
-              <li key={index} className={classNames.menuItem}>
-                <Link className={classNames.menuItemLink} to={item.route}>
-                  {item.icon}
-                </Link>
-              </li>
-            );
-          })}
+        <li className={classNames.menuItem}>
+          <Link className={classNames.menuItemLink} to="" onClick={handleLogout}>
+            logout
+          </Link>
+        </li>
       </ul>
     </div>
   );

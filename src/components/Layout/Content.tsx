@@ -2,7 +2,7 @@ import React from "react";
 import { style } from "typestyle";
 
 const content = style({
-  width: "100%",
+  width: "100%"
 });
 
 const Content = (props: React.HTMLProps<HTMLDivElement>) => {

@@ -11,7 +11,17 @@ const classNames = stylesheet({
     width: "600px",
     margin: "auto",
     marginTop: "50px",
-    textAlign: "center"
+    textAlign: "center",
+
+    $nest: {
+      "@media screen and (max-width: 900px)": {
+        width: "90%",
+        margin: "auto"
+      }
+    }
+  },
+  img: {
+    maxWidth: "100%",
   }
 });
 
@@ -33,7 +43,7 @@ const QuizStart = () => {
     <div className={classNames.quizWrap}>
       {!start ? (
         <React.Fragment>
-          <img src={QuizImage} alt="Quiz starter" />
+          <img src={QuizImage} alt="Quiz starter" className={classNames.img}/>
           <Button loading={loader} onClick={handleQuizStart}>
             Start Quiz
           </Button>

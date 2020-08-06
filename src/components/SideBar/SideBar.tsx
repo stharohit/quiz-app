@@ -8,7 +8,15 @@ const classNames = stylesheet({
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    height: "100vh"
+    height: "100vh",
+
+    "@media screen and (max-width: 900px)": {
+      position: "fixed",
+      left: 0,
+      bottom: 0,
+      height: "auto",
+      width: "100%"
+    }
   }
 });
 

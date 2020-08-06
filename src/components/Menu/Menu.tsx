@@ -18,7 +18,7 @@ const classNames = stylesheet({
       },
       "&:active": {
         boxShadow: `0 0 10px ${Colors.GREY}`
-      }
+      },
     }
   },
   menuItemLink: {

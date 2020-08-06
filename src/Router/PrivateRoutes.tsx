@@ -13,10 +13,10 @@ const PrivateRoutes = (props: any) => {
     <Route
       {...rest}
       render={() =>
-        window.localStorage.getItem("loggedIn") === "false" ? (
-          <Redirect to="/auth/login" />
-        ) : (
+        window.localStorage.getItem("loggedIn") === "true" ? (
           <Component />
+        ) : (
+          <Redirect to="/auth/login" />
         )
       }
     />

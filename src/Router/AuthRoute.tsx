@@ -12,7 +12,7 @@ const AuthRoute = () => {
         ) : (
           <React.Fragment>
             <Route path="/auth/login" component={Login} />
-            <Route exact path="/auth/signup" component={Signup} />
+            <Route path="/auth/signup" component={Signup} />
           </React.Fragment>
         )}
       </Switch>
